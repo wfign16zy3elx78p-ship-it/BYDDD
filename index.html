@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BYD Seal 2026 — Concept Landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="overlay"></div>
+      <nav class="topbar">
+        <span class="brand">BYD</span>
+        <button class="ghost">Đặt lịch lái thử</button>
+      </nav>
+
+      <section class="hero-content">
+        <p class="eyebrow">Future Electric Performance</p>
+        <h1>BYD SEAL 2026</h1>
+        <p class="sub">Tesla x Apple x BMW inspired visual storytelling.</p>
+        <div class="cta-row">
+          <button class="solid">Khám phá</button>
+          <button class="ghost">Đặt cọc online</button>
+        </div>
+      </section>
+
+      <section class="car-stage" aria-label="3D car stage">
+        <canvas id="carCanvas" aria-label="BYD Seal 3D model"></canvas>
+        <div id="loading" class="hint">Đang tải model... (đặt file tại <code>assets/byd-seal.glb</code>)</div>
+        <div id="fallback" class="car-fallback" hidden>
+          Không load được model. Kiểm tra lại đường dẫn <code>assets/byd-seal.glb</code>.
+        </div>
+
+        <div class="controls">
+          <label>Color</label>
+          <div class="swatches">
+            <button class="swatch" data-color="#5f86ff" style="--c:#5f86ff" aria-label="Blue"></button>
+            <button class="swatch" data-color="#9f9f9f" style="--c:#9f9f9f" aria-label="Silver"></button>
+            <button class="swatch" data-color="#ffffff" style="--c:#ffffff" aria-label="White"></button>
+            <button class="swatch" data-color="#161616" style="--c:#161616" aria-label="Black"></button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="story reveal" id="range">
+        <h2>530KM RANGE</h2>
+        <p>0-100 in 3.8s · Blade Battery</p>
+      </section>
+      <section class="story reveal" id="led">
+        <h2>Sharp LED Technology</h2>
+        <p>Camera zoom vào cụm đèn với ánh sáng cinematic.</p>
+      </section>
+      <section class="story reveal" id="interior">
+        <h2>Luxury Smart Cabin</h2>
+        <p>15.6" rotating screen · AI cockpit · interior view transition.</p>
+      </section>
+
+      <section class="booking reveal">
+        <h2>Booking / Đặt cọc online</h2>
+        <form>
+          <input type="text" placeholder="Họ và tên" required />
+          <input type="tel" placeholder="Số điện thoại" required />
+          <button type="submit" class="solid">Giữ suất đặt cọc</button>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
